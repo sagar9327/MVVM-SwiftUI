@@ -9,9 +9,7 @@ final class RedditListViewModel: ObservableObject {
     @Published var arrPost: [RedditPost] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
-    
     private let client: RedditListClientProtocol
-    
     init(client: RedditListClientProtocol) {
         self.client = client
     }
@@ -28,4 +26,5 @@ final class RedditListViewModel: ObservableObject {
             errorMessage = error.localizedDescription
         }
     }
+    
 }

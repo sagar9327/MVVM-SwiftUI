@@ -5,7 +5,7 @@
 //  Created by Sagar Kalathil on 16/09/26.
 //
 
-struct RedditPost: Decodable, Identifiable {
+struct RedditPost: Decodable, Identifiable, Hashable {
     var userId: Int
     var id: Int
     var title: String

@@ -11,7 +11,14 @@ struct MVVM_SwiftUIApp: App {
     private let appDependencies = AppDependencies()
     var body: some Scene {
         WindowGroup {
-            RedditListView(vm: RedditListDependencies(appDependencies: appDependencies).makeViewModel())
+            NavigationStack {
+                RedditListView(
+                    vm: RedditListDependencies(
+                        appDependencies: appDependencies
+                    )
+                    .makeViewModel()
+                )
+            }
         }
     }
 }
