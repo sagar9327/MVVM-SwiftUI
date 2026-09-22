@@ -10,7 +10,13 @@ struct RedditUserDetail: View {
     var post: RedditPost
     var body: some View {
         VStack {
-            Text("User Detail Screen")
+            Text(post.title)
+                .foregroundStyle(Color.red)
+                .fontWeight(.bold)
+            Text(post.body)
+                .foregroundStyle(Color.black)
+                .fontWeight(.bold)
         }
+        .navigationTitle("Detail Screen")
     }
 }
